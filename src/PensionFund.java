@@ -1,5 +1,5 @@
 public class PensionFund {
-
+    private static final double PENSION_RATE = 0.7;
 
         private String fundName;
         private int foundationYear;
@@ -15,45 +15,45 @@ public class PensionFund {
             this.address = address;
         }
 
-    @Override
-    public String toString() {
-        return "PensionFund{" +
-                "fundName='" + fundName + '\'' +
-                ", foundationYear=" + foundationYear +
-                ", numberOfContributors=" + numberOfContributors +
-                '}';
+        @Override
+        public String toString() {
+            return "PensionFund{" +
+                    "fundName='" + fundName + '\'' +
+                    ", foundationYear=" + foundationYear +
+                    ", numberOfContributors=" + numberOfContributors +
+                    '}';
+        }
+
+
+        public String getFundName() {
+            return fundName;
+        }
+
+        public void setFundName(String fundName) {
+            this.fundName = fundName;
+        }
+
+        public int getFoundationYear() {
+            return foundationYear;
+        }
+
+        public void setFoundationYear(int foundationYear) {
+            this.foundationYear = foundationYear;
+        }
+
+        public int getNumberOfContributors() {
+            return numberOfContributors;
+        }
+
+        public void setNumberOfContributors(int numberOfContributors) {
+            this.numberOfContributors = numberOfContributors;
+        }
+
+
+        public double calculateFuturePension(Person person) {
+            return 0.7 * person.calculateAverageSalary();
+        }
+
+
+
     }
-
-
-    public String getFundName() {
-        return fundName;
-    }
-
-    public void setFundName(String fundName) {
-        this.fundName = fundName;
-    }
-
-    public int getFoundationYear() {
-        return foundationYear;
-    }
-
-    public void setFoundationYear(int foundationYear) {
-        this.foundationYear = foundationYear;
-    }
-
-    public int getNumberOfContributors() {
-        return numberOfContributors;
-    }
-
-    public void setNumberOfContributors(int numberOfContributors) {
-        this.numberOfContributors = numberOfContributors;
-    }
-
-
-    public double calculateFuturePension(Person person) {
-        return 0.7 * person.calculateAverageSalary();
-    }
-
-
-
-}

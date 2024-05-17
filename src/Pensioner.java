@@ -10,10 +10,10 @@ public class Pensioner extends Person {
 
 
 
-        @Override
-        public double calculateAverageSalary () {
-            return MathHelper.calculateAverage(getMinSalary(), getMaxSalary(), Pensioner.PENSIONER_CONSTANT_SALARY);
-        }
+    @Override
+    public double calculateAverageSalary () {
+        return MathHelper.calculateAverage(getMinSalary(), getMaxSalary(), Pensioner.PENSIONER_CONSTANT_SALARY);
+    }
 
     @Override
     public String toString() {
@@ -31,6 +31,11 @@ public class Pensioner extends Person {
 
 
 }
+
+
+
+
+
 
 
 
