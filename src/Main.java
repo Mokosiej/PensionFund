@@ -3,8 +3,9 @@ public class Main {
         PensionFund pensionFund = new PensionFund("Наш Пенсионный Фонд", 1990, 1000, 1500, "Poland, Warsaw");
 
 
-        Worker worker = new Worker("Василий", 37, 18, 180, 3, "1987-02-29", 1000, 5000);
-        Pensioner pensioner = new Pensioner("Петр", 63,30,174, 2, "1961-01-02", 900, 5500);
+        Worker worker = new Worker("Иван", 42, 20, 160, 1, "1982-04-20", 2000, 6000);
+        Pensioner pensioner = new Pensioner("Мария", 68,15,170, 0, "1956-10-01", 700, 4500);
+
 
 
         double workerPension = pensionFund.calculateFuturePension(worker);
