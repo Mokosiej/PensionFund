@@ -14,6 +14,17 @@ public class PensionFund {
             this.totalAssets = totalAssets;
             this.address = address;
         }
+
+    @Override
+    public String toString() {
+        return "PensionFund{" +
+                "fundName='" + fundName + '\'' +
+                ", foundationYear=" + foundationYear +
+                ", numberOfContributors=" + numberOfContributors +
+                '}';
+    }
+
+
     public String getFundName() {
         return fundName;
     }
@@ -42,4 +53,7 @@ public class PensionFund {
     public double calculateFuturePension(Person person) {
         return 0.7 * person.calculateAverageSalary();
     }
+
+
+
 }

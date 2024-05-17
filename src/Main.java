@@ -15,6 +15,8 @@ public class Main {
         System.out.println("Будущая пенсия для работника " + worker.getName() + ": " + workerPension);
         System.out.println("Будущая пенсия для пенсионера " + pensioner.getName() + ": " + pensionerPension);
     }
+
+
 }
 
 

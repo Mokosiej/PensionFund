@@ -1,14 +1,15 @@
 public abstract class Person {
 
 
-    private String name;
-    private int year;
-    private int age;
-    private double height;
-    private int amountOfChildren;
-    private String birthDate;
-    private double minSalary;
-    private double maxSalary;
+    String name;
+    int year;
+    int age;
+    double height;
+    int amountOfChildren;
+    String birthDate;
+    double minSalary;
+    double maxSalary;
+
     public static final int DEFAULT_WORKING_AGE = 18;
 
 
@@ -45,7 +46,6 @@ public abstract class Person {
     }
 
     abstract double calculateAverageSalary();
-
 
 
     public String getName() {
@@ -110,6 +110,30 @@ public abstract class Person {
 
     public void setMaxSalary(double maxSalary) {
         this.maxSalary = maxSalary;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                "year=" + year +
+                ", age=" + age +
+                ", height=" + height +
+                ", numberOfChildren=" + amountOfChildren +
+                ", birthDate=" + birthDate +
+                ", minSalary=" + minSalary +
+                ", maxSalary=" + maxSalary +
+                '}';
     }
 }
 

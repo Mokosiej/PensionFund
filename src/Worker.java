@@ -9,4 +9,18 @@ public class Worker extends Person {
     public double calculateAverageSalary() {
         return MathHelper.calculateAverage(getMinSalary(), getMaxSalary());
     }
+
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "name='" + name + '\'' +
+                "year=" + year +
+                ", age=" + age +
+                ", height=" + height +
+                ", numberOfChildren=" + amountOfChildren +
+                ", birthDate=" + birthDate +
+                ", minSalary=" + minSalary +
+                ", maxSalary=" + maxSalary +
+                '}';
+    }
 }

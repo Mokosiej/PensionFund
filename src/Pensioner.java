@@ -8,9 +8,29 @@ public class Pensioner extends Person {
     }
 
 
+
+
+        @Override
+        public double calculateAverageSalary () {
+            return MathHelper.calculateAverage(getMinSalary(), getMaxSalary(), Pensioner.PENSIONER_CONSTANT_SALARY);
+        }
+
     @Override
-    public double calculateAverageSalary() {
-        return MathHelper.calculateAverage(getMinSalary(), getMaxSalary(), PENSIONER_CONSTANT_SALARY);
+    public String toString() {
+        return "Pensioner{" +
+                "name='" + name + '\'' +
+                "year=" + year +
+                ", age=" + age +
+                ", height=" + height +
+                ", numberOfChildren=" + amountOfChildren +
+                ", birthDate=" + birthDate +
+                ", minSalary=" + minSalary +
+                ", maxSalary=" + maxSalary +
+                '}';
     }
 
+
 }
+
+
+
