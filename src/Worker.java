@@ -1,4 +1,4 @@
-public class Worker extends Person {
+public class Worker extends Person implements Employable {
 
     public Worker(String name, int year, int age, double height, int amountOfChildren, String birthDate, double minSalary, double maxSalary) {
         super(name, year, age, height, amountOfChildren, birthDate, minSalary, maxSalary);
@@ -22,5 +22,10 @@ public class Worker extends Person {
                 ", minSalary=" + minSalary +
                 ", maxSalary=" + maxSalary +
                 '}';
+    }
+
+    @Override
+    public void goToWork() {
+        System.out.println("Я счастливо шагаю на работу");
     }
 }

@@ -1,4 +1,6 @@
-public class Pensioner extends Person {
+import java.util.Random;
+
+public class Pensioner extends Person implements Employable {
 
     public static final double PENSIONER_CONSTANT_SALARY = 2000.0;
 
@@ -8,10 +10,8 @@ public class Pensioner extends Person {
     }
 
 
-
-
     @Override
-    public double calculateAverageSalary () {
+    public double calculateAverageSalary() {
         return MathHelper.calculateAverage(getMinSalary(), getMaxSalary(), Pensioner.PENSIONER_CONSTANT_SALARY);
     }
 
@@ -30,6 +30,15 @@ public class Pensioner extends Person {
     }
 
 
+    @Override
+    public void goToWork() {
+        Random rand = new Random();
+        if (rand.nextBoolean()) {
+            System.out.println("Я вообще-то на пенсии");
+        } else {
+            System.out.println("Ладно, немного поработаю");
+        }
+    }
 }
 
 
